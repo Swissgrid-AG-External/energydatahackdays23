@@ -1,0 +1,9 @@
+# Group 3 Results
+
+## Task
+
+The target variable is "Active-Losses". The goal is to forecast the active losses for the next day in hourly resolution, meaning the output should be 24 numbers (multi-step forecasting output). You have the freedom to choose any data as feature(s) for your model. For example, it is recommended to use the active losses in the past 7 days as one of the features, because of the autocorrelation and the weekly seasonality in the active losses data. However, please choose the feature(s) and the length of the inputs as you wish.
+
+## Data Processing
+
+We received data about solar generation and wind generation  in Italy and Germany (`Forecast-renewable-generation`); temperature forecasts of Switzerland, France, Germany and Italy (`Forecast-temperature.csv`); Net Transfer Capacity (NTC) between Switzerland and its neighbouring countries (`NTC.csv`). The target variable can be found in the `Avtice-losses.csv` file. Active losses were provided in kWh and in 15 minutes interval. For forecasting, these active losses had to be converted to hourly resolution and the kWh had to be converted to MWh. After merging all the data, we generated additional features using cyclical encoding. In addition, we added the Swiss holidays using the `holiday` package, included 168 lags of the target variable and one-hot encoded the categorical variables. As for imputation we used the `SimpleImputer` for both numerical (mean imputation) and categorical (most frequent imputation) columns. The data was scaled. Both imputation and scaling were implemented in a `sci-kit learn`  pipeline to allow for easy transformation of the training, validation and holdout data.
