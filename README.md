@@ -18,8 +18,9 @@ Historical active losses data Solar generation data for Germany and Italy Wind g
 
 The well-performed models will be introduced to our internal forecastingprocess and support us make better decisions in our market operational tasks,and will eventually help us improvement procurement performance and reduceprocurement costs. This is your chance to make a real impact!
 
-## Resuls & Repository
+## Results & Repository
 
 This repository is the conclusion of the EDHs at FHNW Brugg from 4 different groups.
+As this is not internal Swissgrid code the codestyle and everything regarding that is not fixed and kind of all over the place.
 
 You can find the final pitch [here](https://hack.energy.opendata.ch/project/12)
