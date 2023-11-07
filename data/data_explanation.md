@@ -2,6 +2,8 @@
 
 This file explains the data which are provided to the challenge *Day-ahead Active Losses Forecasting*. The raw data will be provided as time series data between 2019 and 2021.
 
+As the active losses data in 2022 is not published till now. Please use the data in 2019-2021 to train, validate, and test your model. When more data is available in the future, we can update it here.
+
 The target variable is "Active-Losses". The goal is to forecast the active losses for the next day in hourly resolution, meaning the output should be 24 numbers (multi-step forecasting output). You have the freedom to choose any data as feature(s) for your model. For example, it is recommended to use the active losses in the past 7 days as one of the features, because of the autocorrelation and the weekly seasonality in the active losses data. However, please choose the feature(s) and the length of the inputs as you wish. 
 
 Below are the details of each dataset:
@@ -57,5 +59,7 @@ The reason these datasets are chosen for this challenge are:
 * NTC limits how much cross-board flows Switzerland can have with its neighboring countries, the lower the limit, the lower the flow, and thus lower losses. 
 
 In summary, all these factors can be relevant for forecasting the active losses, please find out which can create the best-performed model. 
+
+A small note: in case of any data missing for some timestamps, which is common when working with the real world data - please clean it as needed.
 
 Good luck and have fun!
